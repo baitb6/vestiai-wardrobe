@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 启动背景：奶油纸色 + 居中图标，避免白屏闪烁 -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/splash_background" />
+    <item
+        android:width="104dp"
+        android:height="104dp"
+        android:gravity="center">
+        <bitmap
+            android:gravity="fill"
+            android:src="@mipmap/ic_launcher" />
+    </item>
+</layer-list>

@@ -1,0 +1,64 @@
+name: wardrobe_manager
+description: 衣橱管家 - 智能衣物管理与穿搭助手
+publish_to: 'none'
+version: 1.9.1+3025
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  
+  # 状态管理
+  provider: ^6.1.1
+  
+  # 本地存储
+  shared_preferences: ^2.2.2
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  
+  # 图像处理
+  image_picker: ^1.0.7
+  
+  # 网络
+  dio: ^5.4.0
+  
+  # UI组件
+  flutter_staggered_grid_view: ^0.7.0
+  
+  # 工具
+  intl: ^0.18.1
+  uuid: ^4.3.1
+  path_provider: ^2.1.2
+  path: ^1.9.0
+
+  # 网关密钥安全存储（API Key 不落 Hive）
+  flutter_secure_storage: ^9.2.2
+
+  # 图片裁剪 / 抠图 / 感知哈希（纯 Dart，无需联网）
+  image: ^4.3.0
+
+  # 备份导出（JSON + 图片打成 zip）
+  archive: ^3.6.1
+
+  # #17 备份导入：从系统文件选择器选 zip 恢复（image_picker 只能选图片，选不了 zip）
+  file_picker: ^9.0.0
+
+  # 导出后调起系统分享
+  share_plus: ^10.1.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.1
+  hive_generator: ^2.0.1
+  build_runner: ^2.4.8
+
+flutter:
+  uses-material-design: true
+  
+  assets:
+    - assets/images/
+    - assets/icons/

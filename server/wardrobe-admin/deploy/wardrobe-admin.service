@@ -1,0 +1,20 @@
+[Unit]
+Description=Wardrobe Manager Admin API
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+Group=www-data
+WorkingDirectory=/opt/wardrobe-admin
+EnvironmentFile=/etc/wardrobe-admin.env
+ExecStart=/opt/wardrobe-admin/.venv/bin/uvicorn server:app --host 127.0.0.1 --port 8787 --workers 1
+Restart=always
+RestartSec=3
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ReadWritePaths=/var/lib/wardrobe-admin
+
+[Install]
+WantedBy=multi-user.target
